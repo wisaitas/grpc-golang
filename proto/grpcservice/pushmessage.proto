@@ -1,0 +1,30 @@
+syntax = "proto3";
+
+package pushmessage;
+
+option go_package = "internal/grpcservice/protogenerate/pushmessage";
+
+service PushMessageService {
+  // Server streaming RPC - server จะ push message ไปหา client อย่างต่อเนื่อง
+  rpc SubscribePushMessages (PushRequest) returns (stream PushMessage);
+}
+
+message PushRequest {
+  string client_id = 1;
+  string topic = 2; // สามารถระบุ topic ที่ต้องการ subscribe
+}
+
+message PushMessage {
+  string id = 1;
+  string content = 2;
+  string timestamp = 3;
+  string topic = 4;
+  MessageType type = 5;
+}
+
+enum MessageType {
+  INFO = 0;
+  WARNING = 1;
+  ERROR = 2;
+  SUCCESS = 3;
+}

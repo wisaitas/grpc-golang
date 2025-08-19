@@ -2,7 +2,7 @@
 // versions:
 // 	protoc-gen-go v1.36.6
 // 	protoc        v6.30.2
-// source: pkg/proto/hello/hello.proto
+// source: proto/grpcservice/hello.proto
 
 package hello
 
@@ -30,7 +30,7 @@ type HelloRequest struct {
 
 func (x *HelloRequest) Reset() {
 	*x = HelloRequest{}
-	mi := &file_pkg_proto_hello_hello_proto_msgTypes[0]
+	mi := &file_proto_grpcservice_hello_proto_msgTypes[0]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -42,7 +42,7 @@ func (x *HelloRequest) String() string {
 func (*HelloRequest) ProtoMessage() {}
 
 func (x *HelloRequest) ProtoReflect() protoreflect.Message {
-	mi := &file_pkg_proto_hello_hello_proto_msgTypes[0]
+	mi := &file_proto_grpcservice_hello_proto_msgTypes[0]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -55,7 +55,7 @@ func (x *HelloRequest) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use HelloRequest.ProtoReflect.Descriptor instead.
 func (*HelloRequest) Descriptor() ([]byte, []int) {
-	return file_pkg_proto_hello_hello_proto_rawDescGZIP(), []int{0}
+	return file_proto_grpcservice_hello_proto_rawDescGZIP(), []int{0}
 }
 
 func (x *HelloRequest) GetName() string {
@@ -74,7 +74,7 @@ type HelloResponse struct {
 
 func (x *HelloResponse) Reset() {
 	*x = HelloResponse{}
-	mi := &file_pkg_proto_hello_hello_proto_msgTypes[1]
+	mi := &file_proto_grpcservice_hello_proto_msgTypes[1]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -86,7 +86,7 @@ func (x *HelloResponse) String() string {
 func (*HelloResponse) ProtoMessage() {}
 
 func (x *HelloResponse) ProtoReflect() protoreflect.Message {
-	mi := &file_pkg_proto_hello_hello_proto_msgTypes[1]
+	mi := &file_proto_grpcservice_hello_proto_msgTypes[1]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -99,7 +99,7 @@ func (x *HelloResponse) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use HelloResponse.ProtoReflect.Descriptor instead.
 func (*HelloResponse) Descriptor() ([]byte, []int) {
-	return file_pkg_proto_hello_hello_proto_rawDescGZIP(), []int{1}
+	return file_proto_grpcservice_hello_proto_rawDescGZIP(), []int{1}
 }
 
 func (x *HelloResponse) GetMessage() string {
@@ -109,36 +109,36 @@ func (x *HelloResponse) GetMessage() string {
 	return ""
 }
 
-var File_pkg_proto_hello_hello_proto protoreflect.FileDescriptor
+var File_proto_grpcservice_hello_proto protoreflect.FileDescriptor
 
-const file_pkg_proto_hello_hello_proto_rawDesc = "" +
+const file_proto_grpcservice_hello_proto_rawDesc = "" +
 	"\n" +
-	"\x1bpkg/proto/hello/hello.proto\x12\x05hello\"\"\n" +
+	"\x1dproto/grpcservice/hello.proto\x12\x05hello\"\"\n" +
 	"\fHelloRequest\x12\x12\n" +
 	"\x04name\x18\x01 \x01(\tR\x04name\")\n" +
 	"\rHelloResponse\x12\x18\n" +
 	"\amessage\x18\x01 \x01(\tR\amessage2E\n" +
 	"\fHelloService\x125\n" +
-	"\bSayHello\x12\x13.hello.HelloRequest\x1a\x14.hello.HelloResponseB\x13Z\x11./pkg/proto/hellob\x06proto3"
+	"\bSayHello\x12\x13.hello.HelloRequest\x1a\x14.hello.HelloResponseB*Z(internal/grpcservice/protogenerate/hellob\x06proto3"
 
 var (
-	file_pkg_proto_hello_hello_proto_rawDescOnce sync.Once
-	file_pkg_proto_hello_hello_proto_rawDescData []byte
+	file_proto_grpcservice_hello_proto_rawDescOnce sync.Once
+	file_proto_grpcservice_hello_proto_rawDescData []byte
 )
 
-func file_pkg_proto_hello_hello_proto_rawDescGZIP() []byte {
-	file_pkg_proto_hello_hello_proto_rawDescOnce.Do(func() {
-		file_pkg_proto_hello_hello_proto_rawDescData = protoimpl.X.CompressGZIP(unsafe.Slice(unsafe.StringData(file_pkg_proto_hello_hello_proto_rawDesc), len(file_pkg_proto_hello_hello_proto_rawDesc)))
+func file_proto_grpcservice_hello_proto_rawDescGZIP() []byte {
+	file_proto_grpcservice_hello_proto_rawDescOnce.Do(func() {
+		file_proto_grpcservice_hello_proto_rawDescData = protoimpl.X.CompressGZIP(unsafe.Slice(unsafe.StringData(file_proto_grpcservice_hello_proto_rawDesc), len(file_proto_grpcservice_hello_proto_rawDesc)))
 	})
-	return file_pkg_proto_hello_hello_proto_rawDescData
+	return file_proto_grpcservice_hello_proto_rawDescData
 }
 
-var file_pkg_proto_hello_hello_proto_msgTypes = make([]protoimpl.MessageInfo, 2)
-var file_pkg_proto_hello_hello_proto_goTypes = []any{
+var file_proto_grpcservice_hello_proto_msgTypes = make([]protoimpl.MessageInfo, 2)
+var file_proto_grpcservice_hello_proto_goTypes = []any{
 	(*HelloRequest)(nil),  // 0: hello.HelloRequest
 	(*HelloResponse)(nil), // 1: hello.HelloResponse
 }
-var file_pkg_proto_hello_hello_proto_depIdxs = []int32{
+var file_proto_grpcservice_hello_proto_depIdxs = []int32{
 	0, // 0: hello.HelloService.SayHello:input_type -> hello.HelloRequest
 	1, // 1: hello.HelloService.SayHello:output_type -> hello.HelloResponse
 	1, // [1:2] is the sub-list for method output_type
@@ -148,26 +148,26 @@ var file_pkg_proto_hello_hello_proto_depIdxs = []int32{
 	0, // [0:0] is the sub-list for field type_name
 }
 
-func init() { file_pkg_proto_hello_hello_proto_init() }
-func file_pkg_proto_hello_hello_proto_init() {
-	if File_pkg_proto_hello_hello_proto != nil {
+func init() { file_proto_grpcservice_hello_proto_init() }
+func file_proto_grpcservice_hello_proto_init() {
+	if File_proto_grpcservice_hello_proto != nil {
 		return
 	}
 	type x struct{}
 	out := protoimpl.TypeBuilder{
 		File: protoimpl.DescBuilder{
 			GoPackagePath: reflect.TypeOf(x{}).PkgPath(),
-			RawDescriptor: unsafe.Slice(unsafe.StringData(file_pkg_proto_hello_hello_proto_rawDesc), len(file_pkg_proto_hello_hello_proto_rawDesc)),
+			RawDescriptor: unsafe.Slice(unsafe.StringData(file_proto_grpcservice_hello_proto_rawDesc), len(file_proto_grpcservice_hello_proto_rawDesc)),
 			NumEnums:      0,
 			NumMessages:   2,
 			NumExtensions: 0,
 			NumServices:   1,
 		},
-		GoTypes:           file_pkg_proto_hello_hello_proto_goTypes,
-		DependencyIndexes: file_pkg_proto_hello_hello_proto_depIdxs,
-		MessageInfos:      file_pkg_proto_hello_hello_proto_msgTypes,
+		GoTypes:           file_proto_grpcservice_hello_proto_goTypes,
+		DependencyIndexes: file_proto_grpcservice_hello_proto_depIdxs,
+		MessageInfos:      file_proto_grpcservice_hello_proto_msgTypes,
 	}.Build()
-	File_pkg_proto_hello_hello_proto = out.File
-	file_pkg_proto_hello_hello_proto_goTypes = nil
-	file_pkg_proto_hello_hello_proto_depIdxs = nil
+	File_proto_grpcservice_hello_proto = out.File
+	file_proto_grpcservice_hello_proto_goTypes = nil
+	file_proto_grpcservice_hello_proto_depIdxs = nil
 }

@@ -2,7 +2,7 @@
 // versions:
 // - protoc-gen-go-grpc v1.5.1
 // - protoc             v6.30.2
-// source: pkg/proto/hello/hello.proto
+// source: proto/grpcservice/hello.proto
 
 package hello
 
@@ -117,5 +117,5 @@ var HelloService_ServiceDesc = grpc.ServiceDesc{
 		},
 	},
 	Streams:  []grpc.StreamDesc{},
-	Metadata: "pkg/proto/hello/hello.proto",
+	Metadata: "proto/grpcservice/hello.proto",
 }

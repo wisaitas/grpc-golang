@@ -2,7 +2,7 @@ syntax = "proto3";
 
 package hello;
 
-option go_package = "./pkg/proto/hello";
+option go_package = "internal/grpcservice/protogenerate/hello";
 
 service HelloService {
   rpc SayHello (HelloRequest) returns (HelloResponse);
